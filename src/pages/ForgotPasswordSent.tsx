@@ -4,25 +4,25 @@ import RegisterHeader from "../components/RegisterHeader.tsx"
 import otpImage from '../assets/OtpImage.png';
 
 
-function SuccessOtpPage() {
+function ForgotPassword() {
   return (
     <>
-        <RegisterHeader />
+        <RegisterHeader header={"Forgot Password"} isForgot={true}/>
         
         <View>
 
             <View style={styles.imageSection}>
                 <Image source={otpImage} style={styles.image} />
-                <Text style={styles.text}>Success</Text>
+                <Text style={styles.text}>Sent</Text>
                 <Text style={styles.para}>
-                    Your Phone number is verified successfully.
+                    Reset Password link is sent to Your Email ID.
                 </Text>
             </View>
 
             <TouchableOpacity style={styles.continueContainer}>
                 <View style={styles.continueView}>
                     <Text style={styles.continueText}>
-                        Continue
+                        Back to Login
                     </Text>
                 </View>
             </TouchableOpacity>
@@ -32,7 +32,7 @@ function SuccessOtpPage() {
   )
 }
 
-export default SuccessOtpPage;
+export default ForgotPassword;
 
 const styles = StyleSheet.create({
     imageSection: {
@@ -58,10 +58,10 @@ const styles = StyleSheet.create({
     },
     continueContainer: {
         top: "45%",
-        left: '10%',
+        left: '7%',
       },
     continueView: {
-      width: '80%',
+      width: '85%',
       height: 55,
       display: 'flex',
       alignItems: "center",
@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     },
     continueText: {
       color: "white",
-      fontSize: 20,
+      fontSize: 19,
     }
 })

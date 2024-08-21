@@ -2,14 +2,14 @@ import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import BackArrow from "../assets/BackArrow.png";
 
-function RegisterHeader() {
+function RegisterHeader({header, isForgot}) {
   return (
     <View>
-        <View >
+        <View > 
             <TouchableOpacity>
                 <Image source={BackArrow} style={styles.arrowImage}/>
             </TouchableOpacity>
-                <Text style={styles.heading}>Registration</Text>
+                <Text style={[styles.heading, (isForgot ? styles.forgot : "")]}>{header}</Text>
         </View>
     </View>
   )
@@ -35,5 +35,8 @@ const styles = StyleSheet.create({
         top: 10,
         width: 25 ,
         height: 25 ,
+    },
+    forgot: {
+        left: "30%",
     }
 })

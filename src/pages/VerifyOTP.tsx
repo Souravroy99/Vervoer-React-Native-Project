@@ -2,13 +2,14 @@ import React from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import otpImage from '../assets/OtpImage.png';
 import OtpInputField from "../components/OtpInputField.tsx";
-import RegisterHeader from "../components/RegisterHeader.tsx"
+import RegisterHeader from "../components/RegisterHeader.tsx";
 
 
-function OtpPage() {
+function VerifyOTP() {
   return (
   <>
-    <RegisterHeader/>
+    <RegisterHeader header={"Registration"} isForgot={false}/>
+
 
     <View>
 
@@ -52,7 +53,7 @@ function OtpPage() {
   );
 }
 
-export default OtpPage;
+export default VerifyOTP;
 
 const styles = StyleSheet.create({
   imageSection: {
