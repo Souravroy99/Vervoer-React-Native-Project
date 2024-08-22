@@ -7,7 +7,7 @@ import RegisterHeader from "../components/RegisterHeader.tsx";
 
 function VerifyOTP() {
   return (
-  <>
+  <View style={styles.container}>
     <RegisterHeader header={"Registration"} isForgot={false}/>
 
 
@@ -49,13 +49,16 @@ function VerifyOTP() {
       </TouchableOpacity>
 
     </View>
-  </>
+  </View>
   );
 }
 
 export default VerifyOTP;
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+  },
   imageSection: {
     display: 'flex',
     justifyContent: 'center',

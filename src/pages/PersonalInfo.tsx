@@ -32,7 +32,7 @@ function PersonalInfo() {
   ];
 
   return (
-    <View>
+    <View style={styles.container}>
       <RegisterHeader header={'Registration'} isForgot={false} />
 
       <View>
@@ -49,7 +49,7 @@ function PersonalInfo() {
           placeholderTextColor="black"
           value={firstName}
           style={styles.inputField}
-          onChangeText={setFirstName}
+          onChangeText={firstNameItem => setFirstName(firstNameItem)}
         />
         <View style={styles.horizontalLine}></View>
 
@@ -59,7 +59,7 @@ function PersonalInfo() {
           placeholderTextColor="black"
           value={lastName}
           style={styles.inputField}
-          onChangeText={setLastName}
+          onChangeText={lastNameItem => setLastName(lastNameItem)}
         />
         <View style={styles.horizontalLine}></View>
 
@@ -69,7 +69,7 @@ function PersonalInfo() {
           placeholder="Enter Your Email ID"
           placeholderTextColor="black"
           value={email}
-          onChangeText={setEmail}
+          onChangeText={emailItem => setEmail(emailItem)}
         />
         <View style={styles.horizontalLine}></View>
 
@@ -77,7 +77,7 @@ function PersonalInfo() {
         <Picker
           style={styles.inputField}
           selectedValue={country}
-          onValueChange={(countryItem) => setCountry(countryItem)}>
+          onValueChange={countryItem => setCountry(countryItem)}>
           {countries.map((country, idx) => (
             <Picker.Item
               key={idx}
@@ -92,7 +92,7 @@ function PersonalInfo() {
         <Picker
           style={styles.inputField}
           selectedValue={state}
-          onValueChange={(stateItem, index) => setState(stateItem)}>
+          onValueChange={stateItem => setState(stateItem)}>
           {states.map((state, idx) => (
             <Picker.Item label={state.label} value={state.value} key={idx} />
           ))}
@@ -101,11 +101,11 @@ function PersonalInfo() {
 
         <Text>Zip Code</Text>
         <TextInput
-          style={styles.inputField}
           placeholder="Enter your Zip Code"
           placeholderTextColor="black"
           value={zip}
-          onChangeText={setZip}
+          onChangeText={zipItem => setZip(zipItem)}
+          style={styles.inputField}
         />
         <View style={styles.horizontalLine}></View>
       </View>
@@ -122,6 +122,9 @@ function PersonalInfo() {
 export default PersonalInfo;
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'white',
+  },
   inputView: {
     paddingHorizontal: 30,
   },
@@ -134,8 +137,8 @@ const styles = StyleSheet.create({
     marginTop: -3,
   },
   horizontalLine: {
-    marginTop: -20,
-    height: 2,
+    marginTop: -23,
+    height: 1,
     backgroundColor: 'gray',
     width: '95%',
     marginVertical: 20,

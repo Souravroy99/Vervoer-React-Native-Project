@@ -1,6 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, Image, ImageBackground } from 'react-native';
+
 import Splash from './src/pages/Splash.tsx';
+import OnBoarding from './src/pages/OnBoarding.tsx';
+import Login from './src/pages/login.tsx';
+import Registration from './src/pages/registration.tsx';
 import VerifyOTP from "./src/pages/VerifyOTP.tsx";
 import PhoneVerified from "./src/pages/SuccessOTP.tsx";
 import PersonalInfo from './src/pages/PersonalInfo.tsx';
@@ -14,13 +18,16 @@ function App(): React.JSX.Element {
     <>
 
       {/* <Splash /> */}
-      <VerifyOTP />
+      {/* <OnBoarding /> */}
+      {/* <Login /> */}
+      {/* <Registration /> */}
+      {/* <VerifyOTP /> */}
       {/* <PhoneVerified /> */}
-      {/* <PersonalInfo /> */}
+      <PersonalInfo />
       {/* <Email /> */}
       {/* <OtpForEmail /> */}
       {/* <ForgotPassword /> */}
-      {/* <EmailVerified /> */}
+      {/* <EmailVerified /> */} 
 
     </>
   );

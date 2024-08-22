@@ -6,7 +6,7 @@ import otpImage from '../assets/OtpImage.png';
 
 function PhoneVerified() {
   return (
-    <>
+    <View style={styles.container}>
         <RegisterHeader header={"Registration"} isForgot={false}/>
         
         <View>
@@ -28,13 +28,16 @@ function PhoneVerified() {
             </TouchableOpacity>
 
         </View>
-    </>
+    </View>
   )
 }
 
 export default PhoneVerified;
 
 const styles = StyleSheet.create({
+    container: {
+      backgroundColor: "white",
+    },
     imageSection: {
       display: 'flex',
       justifyContent: 'center',
